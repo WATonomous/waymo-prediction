@@ -1,0 +1,53 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "eval",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evaluate.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["-c", "configs/pgp_gatx2_lvm_traversal.yml", "-r", "/nuscenes_CLEAN", "-d", "/nuscenes_PGP_PREPROCESS/no_visuals", "-o", "/home/docker/pgp/output", "-w", "/PGP_lr-scheduler.tar"]
+        },
+        {
+            "name": "train",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["-c", "configs/pgp_gatx2_lvm_traversal.yml", "-r", "/nuscenes_CLEAN", "-d", "/nuscenes_PGP_PREPROCESS/no_visuals", "-o", "/home/docker/pgp/output", "-w", "/PGP_lr-scheduler.tar", "-n", "5"]
+        },
+        {
+            "name": "eval_visual",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evaluate.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["-c", "configs/pgp_gatx2_lvm_traversal_visual.yml", "-r", "/nuscenes_CLEAN", "-d", "/nuscenes_PGP_PREPROCESS/visuals", "-o", "/root/pgp/output", "-w", "/PGP_lr-scheduler.tar"]
+        },
+        {
+            "name": "pre",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/preprocess.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["-c", "configs/preprocess_nuscenes.yml", "-r", "/nuscenes_CLEAN", "-d", "/nuscenes_PGP_PREPROCESS"]
+        },
+        {
+            "name": "pre-mini",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/preprocess.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["-c", "configs/preprocess_nuscenes.yml", "-r", "/nuscenes_CLEAN", "-d", "/home/docker/pgp/mini_preprocess"]
+        }
+    ]
+}
