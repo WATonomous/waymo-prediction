@@ -3,7 +3,7 @@ Containerized research environment for the Waymo Motion Prediction Challenge.
 
 
 ## Setup
----
+### Initialization
 Run the following before using docker compose to fix ownership while inside a development container:
 
 ```bash
@@ -19,3 +19,6 @@ FIXGID=100
 USERNAME=eddyzhou
 WANDB_MODE=offline
 ```
+
+### Accessing Waymo Data
+TBD
