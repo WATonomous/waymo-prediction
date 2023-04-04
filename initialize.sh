@@ -17,10 +17,9 @@ while true; do
 done
 
 > ".env"
-echo "COMPOSE_PROJECT_NAME=nerf-optimization-${USER}" >> ".env"
+echo "COMPOSE_PROJECT_NAME=waymo-pred-${USER}" >> ".env"
 echo "FIXUID=$FIXUID" >> ".env"
 echo "FIXGID=$FIXGID" >> ".env"
-echo "GUI_TOOLS_VNC_PORT=$GUI_TOOLS_VNC_PORT" >> ".env"
 echo "USERNAME=${USER}" >> ".env"
 echo "WANDB_MODE=${WANDB_MODE}" >> ".env"
 

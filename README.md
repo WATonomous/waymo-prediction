@@ -1,5 +1,5 @@
-# nerf-optimization
-Containerized research environment for NeRF optimization.
+# Waymo Prediction
+Containerized research environment for the Waymo Motion Prediction Challenge.
 
 
 ## Setup
@@ -13,7 +13,9 @@ $ ./initialize.sh
 This only needs to be done once. Confirm that you're project is initialized by checking the `.env` file. It should contain something like:
 
 ```
-COMPOSE_PROJECT_NAME=nerf_optimization_e23zhou
-FIXUID=1011
-FIXGID=1014
+COMPOSE_PROJECT_NAME=waymo-pred-eddyzhou
+FIXUID=1670
+FIXGID=100
+USERNAME=eddyzhou
+WANDB_MODE=offline
 ```
